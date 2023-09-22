@@ -1,0 +1,261 @@
+{
+	"info": {
+		"_postman_id": "8527b5bd-5598-4aad-9294-7cc1c5e6625e",
+		"name": "IkeTest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14184365"
+	},
+	"item": [
+		{
+			"name": "http://localhost/IkeTest/public/api/cards",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/IkeTest/public/api/cards",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"IkeTest",
+						"public",
+						"api",
+						"cards"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/IkeTest/public/api/create_user",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\": \"maikaaa\",\r\n    \"name\": \"John Doe\",\r\n    \"phone\": \"1234567890\",\r\n    \"password\": \"Passworda1\",\r\n    \"consent_id1\": true,\r\n    \"consent_id2\": false,\r\n    \"consent_id3\": true\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost/IkeTest/public/api/create_user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"IkeTest",
+						"public",
+						"api",
+						"create_user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/IkeTest/public/api/users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/IkeTest/public/api/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"IkeTest",
+						"public",
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/IkeTest/public/api/history",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|hrhV2SE3pGCJ4xJxSYLGhMFs19eL0ph6wWWRpjB904cf4ddc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 17|al38VcZREODQzaqM9yZ1g4rkdnpz6UeDgZDIcbED5b91e575",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost/IkeTest/public/api/history",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"IkeTest",
+						"public",
+						"api",
+						"history"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/IkeTest/public/api/get_token",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\": \"mikelin\",\r\n    \"password\": \"pasword1\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost/IkeTest/public/api/get_token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"IkeTest",
+						"public",
+						"api",
+						"get_token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/IkeTest/public/api/update_user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_user\": \"11\",\r\n    \"user\": \"mikelin\",\r\n    \"name\": \"fernando Ruiz\",\r\n    \"phone\": \"7131387089\",\r\n    \"password\": \"pasword1\",\r\n    \"consent_id1\": true,\r\n    \"consent_id2\": true,\r\n    \"consent_id3\": true\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost/IkeTest/public/api/update_user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"IkeTest",
+						"public",
+						"api",
+						"update_user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/IkeTest/public/api/delete_user",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_user\" : \"1\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost/IkeTest/public/api/delete_user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"IkeTest",
+						"public",
+						"api",
+						"delete_user"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
